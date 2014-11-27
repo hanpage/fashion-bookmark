@@ -262,6 +262,7 @@ function scrollToForm() {
 function validateForm() {
             var $name_field = document.getElementById('entry_1325065521');
             var $email_field = document.getElementById('entry_1389275679');
+            var $content_field = document.getElementById('entry_2034971825');
             var $phone_field = document.getElementById('');
 
             var is_human = document.getElementById('group_725954815_1').checked;
@@ -296,6 +297,17 @@ function validateForm() {
                 return false;
               }
             }
+            if ($content_field != undefined) {
+              var content_value = $content_field.value;
+              if (content_value < 1) {
+                  alert("내용을 적어 주세요.\n (Please fill out the content field.)");
+                  scrollToForm();
+                  $content_field.focus();
+                  return false;
+              }
+            }
+
+        
             if (!is_human) {
                 alert("체크박스를 확인하세요.\n (Please check the checkbox.)");
                 scrollToForm();
