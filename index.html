@@ -260,19 +260,30 @@ function scrollToForm() {
 }
 
 function validateForm() {
+            var $name_field = document.getElementById('entry_1325065521');
             var $email_field = document.getElementById('entry_1389275679');
             var $phone_field = document.getElementById('');
 
             var is_human = document.getElementById('group_725954815_1').checked;
-            var email_value = $email_field.value;
-            var email_result = EMAIL_REGEX.test(email_value);
-                        
-            
-            if (!email_result) {
-                alert("올바른 이메일 주소를 입력해 주세요.\n (Please enter a valid email address.)");
-                scrollToForm();
-                $email_field.focus();
-                return false;
+
+            if ($name_field != undefined) {
+              var name_value = $name_field.value;
+              if (name_value < 1) {
+                  alert("성함을 적어 주세요.\n (Please enter your name.)");
+                  scrollToForm();
+                  $name_field.focus();
+                  return false;
+              }
+            }
+            if ($email_field != undefined) {
+              var email_value = $email_field.value;
+              var email_result = EMAIL_REGEX.test(email_value);
+              if (!email_result) {
+                  alert("올바른 이메일 주소를 입력해 주세요.\n (Please enter a valid email address.)");
+                  scrollToForm();
+                  $email_field.focus();
+                  return false;
+              }
             }
             if ($phone_field != undefined) {
               var phone_value = $phone_field.value;
