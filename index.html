@@ -269,7 +269,7 @@ function validateForm() {
                         
             
             if (!email_result) {
-                alert("올바른 이메일 주소를 입력해 주세요.\n Please enter a valid email address.");
+                alert("올바른 이메일 주소를 입력해 주세요.\n (Please enter a valid email address.)");
                 scrollToForm();
                 $email_field.focus();
                 return false;
@@ -279,14 +279,14 @@ function validateForm() {
               var phone_result = PHONE_REGEX.test(phone_value);
 
               if (!phone_result) {
-                 alert("전화번호를 숫자만 입력해 주세요. (Please enter valid phone number without any special characters.)");
+                 alert("전화번호를 숫자만 입력해 주세요.\n (Please enter valid phone number without any special characters.)");
                 scrollToForm();
                 $phone_field.focus();
                 return false;
               }
             }
             if (!is_human) {
-                alert("저장에 실패하였습니다. Content not saved.");
+                alert("체크박스를 확인하세요.\n (Please check the checkbox.)");
                 scrollToForm();
                 return false;
             }
