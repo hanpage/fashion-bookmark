@@ -2107,6 +2107,10 @@ hr{margin-top:10px}
 .bg-gray{background:#f8f8f8}
 .bg-dark{background:#575757}
 .text-light{color:#fff}
+.red{color:red}
+.checkbox{padding-left:0}
+.checkbox label{line-height:25px;display:block}
+.checkbox input[type=checkbox]{float:none;width:13px;height:13px;padding:0;margin:2px 6px 0 0;vertical-align:middle;position:relative;top:-1px}
 .intro{width:100%;position:relative;background-position:top center;background-repeat:no-repeat;background-size:cover}
 .intro-wrapper{background-color:inherit}
 #intro.intro{padding:200px 0 150px}
